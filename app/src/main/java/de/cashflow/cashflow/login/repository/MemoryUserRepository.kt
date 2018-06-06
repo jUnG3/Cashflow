@@ -1,6 +1,6 @@
 package de.cashflow.cashflow.login.repository
 
-class UserRepositoryImpl : UserRepository {
+class MemoryUserRepository : UserRepository {
 
     companion object {
         private var users: MutableMap<String, String> = HashMap()
