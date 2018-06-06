@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import de.cashflow.cashflow.R
 import de.cashflow.cashflow.hash.ShaHasher
-import de.cashflow.cashflow.login.bl.CredentialChecker
+import de.cashflow.cashflow.login.manager.UserManager
 import de.cashflow.cashflow.login.handler.LoginHandler
 import de.cashflow.cashflow.login.handler.RegistrationHandler
-import de.cashflow.cashflow.login.repository.MemoryUserRepository
+import de.cashflow.cashflow.user.repository.MemoryUserRepository
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -20,17 +20,17 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val checker = CredentialChecker(ShaHasher(), usernameInputField, passwordInputField, MemoryUserRepository())
+        val checker = UserManager(ShaHasher(), usernameInputField, passwordInputField, MemoryUserRepository())
 
         setupLoginButton(checker)
         setupRegisterButton(checker)
     }
 
-    private fun setupRegisterButton(checker: CredentialChecker) {
+    private fun setupRegisterButton(checker: UserManager) {
         registerButton.setOnClickListener(RegistrationHandler(checker))
     }
 
-    private fun setupLoginButton(checker: CredentialChecker) {
+    private fun setupLoginButton(checker: UserManager) {
         loginButton.setOnClickListener(LoginHandler(checker))
     }
 }

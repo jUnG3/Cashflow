@@ -7,9 +7,9 @@ import android.widget.Toast
 import de.cashflow.cashflow.R
 import de.cashflow.cashflow.dashboard.activity.DashboardActivity
 import de.cashflow.cashflow.login.activity.LoginActivity
-import de.cashflow.cashflow.login.bl.CredentialChecker
+import de.cashflow.cashflow.login.manager.UserManager
 
-class LoginHandler(private val checker: CredentialChecker) : View.OnClickListener {
+class LoginHandler(private val checker: UserManager) : View.OnClickListener {
 
     override fun onClick(v: View) {
         when (checker.checkCredentials()) {

@@ -1,4 +1,4 @@
-package de.cashflow.cashflow.login.repository
+package de.cashflow.cashflow.user.repository
 
 class MemoryUserRepository : UserRepository {
 

@@ -4,11 +4,11 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import de.cashflow.cashflow.R
-import de.cashflow.cashflow.login.bl.CredentialChecker
+import de.cashflow.cashflow.login.manager.UserManager
 import java.security.NoSuchAlgorithmException
 
 class RegistrationHandler(
-        private val checker: CredentialChecker
+        private val checker: UserManager
 ) : View.OnClickListener {
 
     override fun onClick(v: View) {

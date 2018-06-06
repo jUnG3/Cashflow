@@ -1,10 +1,10 @@
-package de.cashflow.cashflow.login.bl
+package de.cashflow.cashflow.login.manager
 
 import android.widget.EditText
 import de.cashflow.cashflow.hash.Hasher
-import de.cashflow.cashflow.login.repository.UserRepository
+import de.cashflow.cashflow.user.repository.UserRepository
 
-class CredentialChecker(
+class UserManager(
         private val hasher: Hasher,
         private val usernameView: EditText,
         private val passwordView: EditText,
