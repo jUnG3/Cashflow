@@ -7,4 +7,5 @@
     <string name="label_wrong_credentials">Invalid credentials</string>
     <string name="label_username_taken">Username taken</string>
     <string name="label_account_created">Account successfully created</string>
+    <string name="label_username_short">Username is to short</string>
 </resources>
