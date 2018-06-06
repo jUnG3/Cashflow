@@ -31,9 +31,6 @@ class LoginWorkflowTest {
     @Test
     fun testWrongCredentials() {
         onView(withId(R.id.usernameInputField)).perform(typeText("jUnG3"))
-        onView(withId(R.id.passwordInputField)).perform(typeText("1111")).perform(closeSoftKeyboard())
-        onView(withId(R.id.registerButton)).perform(click())
-
         onView(withId(R.id.passwordInputField)).perform(clearText(), typeText("2222")).perform(closeSoftKeyboard())
         onView(withId(R.id.loginButton)).perform(click())
         onView(withText(R.string.label_wrong_credentials)).inRoot(withDecorView(not(activityTestRule.activity.window.decorView))).check(matches(isDisplayed()))
