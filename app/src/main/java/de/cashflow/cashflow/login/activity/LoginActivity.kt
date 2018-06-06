@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import de.cashflow.cashflow.R
 import de.cashflow.cashflow.hash.ShaHasher
-import de.cashflow.cashflow.login.manager.UserManager
+import de.cashflow.cashflow.user.manager.UserManager
 import de.cashflow.cashflow.login.handler.LoginHandler
 import de.cashflow.cashflow.login.handler.RegistrationHandler
 import de.cashflow.cashflow.user.repository.MemoryUserRepository

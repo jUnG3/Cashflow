@@ -4,7 +4,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import de.cashflow.cashflow.R
-import de.cashflow.cashflow.login.manager.UserManager
+import de.cashflow.cashflow.user.manager.UserManager
 import java.security.NoSuchAlgorithmException
 
 class RegistrationHandler(
