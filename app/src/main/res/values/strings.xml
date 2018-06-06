@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Cashflow</string>
+    <string name="login_username_label">Username</string>
+    <string name="login_password_label">Password</string>
+    <string name="label_login">Login</string>
+    <string name="label_sign_up">Sign up</string>
+    <string name="label_wrong_credentials">Invalid credentials</string>
+    <string name="label_username_taken">Username taken</string>
+    <string name="label_account_created">Account successfully created</string>
+</resources>
