@@ -1,4 +1,4 @@
-package de.cashflow.cashflow.login.manager
+package de.cashflow.cashflow.user.manager
 
 import android.widget.EditText
 import de.cashflow.cashflow.hash.Hasher

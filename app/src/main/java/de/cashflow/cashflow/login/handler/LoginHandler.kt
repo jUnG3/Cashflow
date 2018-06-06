@@ -7,7 +7,7 @@ import android.widget.Toast
 import de.cashflow.cashflow.R
 import de.cashflow.cashflow.dashboard.activity.DashboardActivity
 import de.cashflow.cashflow.login.activity.LoginActivity
-import de.cashflow.cashflow.login.manager.UserManager
+import de.cashflow.cashflow.user.manager.UserManager
 
 class LoginHandler(private val checker: UserManager) : View.OnClickListener {
 
