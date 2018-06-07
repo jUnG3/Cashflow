@@ -1,6 +1,6 @@
 package de.cashflow.model
 
-enum class EntryType(
+enum class EntryType{
     DEBIT,
     DEPOSIT
-)
+}
