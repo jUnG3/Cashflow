@@ -4,6 +4,7 @@ import de.cashflow.domain.model.User
 
 interface UserRepository {
 
+    @Throws(UserNotFoundException::class)
     fun findUserByUsername(username: String): User
 
     fun isUsernameTaken(username: String): Boolean
