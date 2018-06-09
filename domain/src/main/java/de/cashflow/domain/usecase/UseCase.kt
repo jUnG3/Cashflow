@@ -1,13 +1,13 @@
 package de.cashflow.domain.usecase
 
-interface UseCase<in P> {
+interface UseCase<in P, R> {
 
-    interface Callback {
+    interface Callback<in R> {
 
-        fun onSuccess()
+        fun onSuccess(output: R)
 
         fun onError(exception: Throwable)
     }
 
-    fun execute(parameter: P, callback: Callback)
+    fun execute(input: P, callback: Callback<R>)
 }
