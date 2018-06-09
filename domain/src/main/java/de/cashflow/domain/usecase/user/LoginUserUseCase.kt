@@ -1,7 +1,7 @@
 package de.cashflow.domain.usecase.user
 
 import de.cashflow.domain.model.User
-import de.cashflow.domain.repository.UserNotFoundException
+import de.cashflow.domain.exception.UserNotFoundException
 import de.cashflow.domain.repository.UserRepository
 import de.cashflow.domain.usecase.UseCase
 

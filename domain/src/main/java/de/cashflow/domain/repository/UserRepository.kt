@@ -1,5 +1,6 @@
 package de.cashflow.domain.repository
 
+import de.cashflow.domain.exception.UserNotFoundException
 import de.cashflow.domain.model.User
 
 interface UserRepository {
