@@ -1,4 +1,4 @@
-package de.cashflow.domain
+package de.cashflow.domain.usecase
 
 interface UseCase<in P> {
 
