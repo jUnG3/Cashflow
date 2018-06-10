@@ -3,11 +3,13 @@ package de.cashflow.cashflow.login.activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import de.cashflow.cashflow.R
-import de.cashflow.cashflow.hash.ShaHasher
-import de.cashflow.cashflow.user.manager.UserManager
-import de.cashflow.cashflow.login.handler.LoginHandler
-import de.cashflow.cashflow.login.handler.RegistrationHandler
-import de.cashflow.cashflow.user.repository.MemoryUserRepository
+import de.cashflow.cashflow.login.presenter.CreateUserPresenter
+import de.cashflow.cashflow.login.presenter.LoginUserPresenter
+import de.cashflow.cashflow.login.view.UsernameAndPasswordView
+import de.cashflow.domain.hash.ShaHasher
+import de.cashflow.domain.repository.user.InMemoryUserRepository
+import de.cashflow.domain.usecase.user.AddNewUserUseCase
+import de.cashflow.domain.usecase.user.LoginUserUseCase
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -20,17 +22,14 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val checker = UserManager(ShaHasher(), usernameInputField, passwordInputField, MemoryUserRepository())
+        val view = UsernameAndPasswordView(usernameInputField, passwordInputField)
+        val repository = InMemoryUserRepository()
+        val hasher = ShaHasher()
 
-        setupLoginButton(checker)
-        setupRegisterButton(checker)
-    }
+        val loginPresenter = LoginUserPresenter(LoginUserUseCase(repository, hasher), view)
+        val registerPresenter = CreateUserPresenter(AddNewUserUseCase(repository, hasher), view)
 
-    private fun setupRegisterButton(checker: UserManager) {
-        registerButton.setOnClickListener(RegistrationHandler(checker))
-    }
-
-    private fun setupLoginButton(checker: UserManager) {
-        loginButton.setOnClickListener(LoginHandler(checker))
+        loginButton.setOnClickListener(loginPresenter::loginButtonClick)
+        registerButton.setOnClickListener(registerPresenter::registerButtonClick)
     }
 }
