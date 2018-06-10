@@ -1,4 +1,4 @@
-package de.cashflow.cashflow.hash
+package de.cashflow.domain.hash
 
 import java.security.NoSuchAlgorithmException
 
