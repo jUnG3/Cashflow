@@ -1,4 +1,4 @@
-package de.cashflow.model
+package de.cashflow.domain.model
 
 enum class IncomeCategory {
     PAY,

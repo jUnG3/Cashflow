@@ -1,5 +1,7 @@
 package de.cashflow.cashflow.hash
 
+import de.cashflow.domain.hash.Hasher
+import de.cashflow.domain.hash.ShaHasher
 import junit.framework.Assert.assertEquals
 import org.junit.Test
 
