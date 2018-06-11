@@ -129,3 +129,4 @@ Temporary Items
 gradle.properties
 
 .idea
+!gradle/wrapper/gradle-wrapper.jar
