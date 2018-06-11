@@ -5,7 +5,7 @@ import de.cashflow.cashflow.login.view.LoginView
 import de.cashflow.domain.model.User
 import de.cashflow.domain.usecase.UseCase
 
-class CreateUserPresenter(private val registerUseCase: UseCase<User, User>, private val view: LoginView) : UseCase.Callback<User> {
+class CreateUserPresenter(private val registerUseCase: UseCase<User, User>, private val view: LoginView) : UseCase.Callback<User>, View.OnClickListener {
 
     override fun onSuccess(output: User) {
         view.showSuccessMessage()
@@ -15,7 +15,7 @@ class CreateUserPresenter(private val registerUseCase: UseCase<User, User>, priv
         view.showErrorMessage()
     }
 
-    fun registerButtonClick(v: View) {
+    override fun onClick(v: View) {
         val registerUser = User(view.getUserName(), view.getPassword())
         registerUseCase.execute(registerUser, this)
     }
