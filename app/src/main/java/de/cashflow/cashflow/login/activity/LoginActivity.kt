@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         val loginPresenter = LoginUserPresenter(LoginUserUseCase(repository, hasher), view)
         val registerPresenter = CreateUserPresenter(AddNewUserUseCase(repository, hasher), view)
 
-        loginButton.setOnClickListener(loginPresenter::loginButtonClick)
+        loginButton.setOnClickListener(loginPresenter)
         registerButton.setOnClickListener(registerPresenter::registerButtonClick)
     }
 }
