@@ -21,5 +21,4 @@ class LoginUserUseCase(private val userRepository: UserRepository, private val h
             callback.onError(e)
         }
     }
-
 }
