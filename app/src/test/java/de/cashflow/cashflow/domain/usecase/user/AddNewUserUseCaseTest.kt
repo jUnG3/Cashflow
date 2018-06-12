@@ -1,6 +1,5 @@
 package de.cashflow.cashflow.domain.usecase.user
 
-import de.cashflow.domain.exception.UserExistsException
 import de.cashflow.domain.hash.Hasher
 import de.cashflow.domain.model.User
 import de.cashflow.domain.repository.UserRepository
