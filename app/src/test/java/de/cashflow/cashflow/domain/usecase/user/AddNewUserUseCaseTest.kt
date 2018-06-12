@@ -50,7 +50,5 @@ class AddNewUserUseCaseTest {
         Mockito.`when`(userRepositoryMock!!.isUsernameTaken(userMock.username)).thenReturn(true)
 
         addNewUserUseCase!!.execute(userMock, callbackMock!!)
-
-        //Mockito.verify(callbackMock!!).onError(UserExistsException("Username is taken"))
     }
 }
