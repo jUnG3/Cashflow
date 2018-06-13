@@ -1,10 +1,9 @@
-package de.cashflow.cashflow.domain.usecase.user
+package de.cashflow.domain.usecase.user
 
 import de.cashflow.domain.hash.Hasher
 import de.cashflow.domain.model.User
 import de.cashflow.domain.repository.UserRepository
 import de.cashflow.domain.usecase.UseCase
-import de.cashflow.domain.usecase.user.AddNewUserUseCase
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith

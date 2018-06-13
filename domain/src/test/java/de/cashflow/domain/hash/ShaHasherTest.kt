@@ -1,10 +1,7 @@
-package de.cashflow.cashflow.domain.hash
+package de.cashflow.domain.hash
 
-import de.cashflow.domain.hash.Hasher
-import de.cashflow.domain.hash.ShaHasher
 import org.junit.Assert.assertEquals
 import org.junit.Test
-
 
 class ShaHasherTest {
 
